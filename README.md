@@ -39,7 +39,7 @@ Each review is cleaned using the following steps:
 
 TF-IDF vectorization is applied to convert text into numerical features
 
- Models
+ ## Models
 
 1. Logistic Regression
 - Trained with max_iter=200
@@ -70,7 +70,7 @@ Dense(128, relu) → Dropout(0.3) → Dense(64, relu) → Dropout(0.3) → Dense
 - Predictions: Thresholded at 0.5 to convert probabilities to binary labels
 
 
-✅ Model Accuracy Scores:
+ ## Model Accuracy Scores:
 
 - Logistic Regression Accuracy: 89.16%
 - Precision: 0.89
@@ -92,7 +92,7 @@ Dense(128, relu) → Dropout(0.3) → Dense(64, relu) → Dropout(0.3) → Dense
 
 
 
-📈 Evaluation
+## Evaluation
 - Accuracy Score
 Measures overall correctness of predictions.
 - Classification Report
@@ -100,7 +100,7 @@ Includes precision, recall, and F1-score for each class, giving insight into mod
 - Confusion Matrix (Visualized with Seaborn)
 A visualization that shows true vs. predicted labels, helping identify misclassifications and class-specific performance.
 
-🔮 Prediction Script
+## Prediction Script
 A standalone script enables instant sentiment prediction from any given text:
    Loads the saved TF-IDF vectorizer and trained classification model
    Accepts a predefined example sentence (or can be easily adapted for user input)
