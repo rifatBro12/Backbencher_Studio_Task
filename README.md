@@ -18,7 +18,7 @@ This project performs binary sentiment classification (Positive/Negative) on IMD
 
 ## 🧪 Dependencies
 
-Install the required packages using pip:
+Install the required packages using pip
 
 ```bash
 pip install pandas scikit-learn nltk beautifulsoup4 seaborn matplotlib tensorflow joblib
@@ -35,7 +35,7 @@ Each review is cleaned using the following steps:
 - Normalize whitespace
 
 📊 Feature Extraction
-TF-IDF vectorization is applied to convert text into numerical features:
+TF-IDF vectorization is applied to convert text into numerical features
 
 🤖 Models
 1. Logistic Regression
@@ -88,12 +88,7 @@ Dense(128) → Dropout → Dense(64) → Dropout → Dense(1)
 - Confusion Matrix (visualized with seaborn)
 
 🔮 Prediction Script
-Interactive CLI for real-time sentiment prediction:
-while True:
-    user_input = input("Enter sentence (or type 'exit' to quit):\n")
-    if user_input.lower() == 'exit':
-        break
-    print("Sentiment:", predict_sentiment(user_input))
+Interactive CLI for real-time sentiment prediction
 
 
 
