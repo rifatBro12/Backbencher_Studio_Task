@@ -1,12 +1,12 @@
 # Movie_review_system
 
-# 🎬 Sentiment Analysis on IMDb Reviews
+#  Sentiment Analysis on IMDb Reviews
 
 This project performs binary sentiment classification (Positive/Negative) on IMDb movie reviews using both Logistic Regression , Naive Bayes and a Deep Learning model. It includes data preprocessing, TF-IDF vectorization, model training, evaluation, hyperparameter tuning, and deployment-ready prediction functionality.
 
 ---
 
-## 📁 Project Structure
+##  Project Structure
 
 - `train_data (1).csv` — Raw dataset containing movie reviews and sentiment labels.
 - `logistic_regression_imdb_optimized.pkl` — Saved optimized Logistic Regression model.
@@ -16,7 +16,7 @@ This project performs binary sentiment classification (Positive/Negative) on IMD
 
 ---
 
-## 🧪 Dependencies
+##  Dependencies
 
 Install the required packages using pip
 
@@ -26,7 +26,8 @@ pip install pandas scikit-learn nltk beautifulsoup4 seaborn matplotlib tensorflo
 import nltk
 nltk.download('stopwords')
 
- 🧼 Data Preprocessing
+  Data Preprocessing
+
 Each review is cleaned using the following steps:
 - Remove HTML tags
 - Convert to lowercase
@@ -34,10 +35,12 @@ Each review is cleaned using the following steps:
 - Remove stopwords
 - Normalize whitespace
 
-📊 Feature Extraction
+ Feature Extraction
+
 TF-IDF vectorization is applied to convert text into numerical features
 
-🤖 Models
+ Models
+
 1. Logistic Regression
 - Trained with max_iter=200
 - Hyperparameter tuning via GridSearchCV
@@ -68,6 +71,7 @@ Dense(128, relu) → Dropout(0.3) → Dense(64, relu) → Dropout(0.3) → Dense
 
 
 ✅ Model Accuracy Scores:
+
 - Logistic Regression Accuracy: 89.16%
 - Precision: 0.89
 - Recall: 0.89
