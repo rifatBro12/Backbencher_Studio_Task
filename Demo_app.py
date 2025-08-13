@@ -29,12 +29,12 @@ def predict_sentiment(user_input):
     clean_input = clean_text(user_input)
     vect_input = vectorizer.transform([clean_input])
     prediction = model.predict(vect_input)[0]
-    return "Positive 😊" if prediction == 1 else "Negative 😞"
+    return "Positive " if prediction == 1 else "Negative "
 
 # --------------------------
 # Streamlit UI
 # --------------------------
-st.title("🎬 IMDb Sentiment Analysis")
+st.title(" IMDb Sentiment Analysis")
 st.write("Enter a movie review to predict whether it is positive or negative.")
 
 user_input = st.text_area("Enter your review:")
@@ -45,3 +45,4 @@ if st.button("Predict Sentiment"):
     else:
         sentiment = predict_sentiment(user_input)
         st.success(f"Predicted Sentiment: {sentiment}")
+
