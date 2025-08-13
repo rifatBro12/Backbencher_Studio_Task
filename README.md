@@ -8,7 +8,7 @@ This project performs binary sentiment classification (Positive/Negative) on IMD
 
 ##  Project Structure
 
-- `train_data (1).csv` — Raw dataset containing movie reviews and sentiment labels.
+- `train_data(1).csv` — kaggle dataset containing movie reviews and sentiment labels.
 - `logistic_regression_imdb_optimized.pkl` — Saved optimized Logistic Regression model.
 - `tfidf_vectorizer.pkl` — Saved TF-IDF vectorizer.
 - `predict_sentiment()` — Function to classify new input text.
