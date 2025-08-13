@@ -26,7 +26,7 @@ pip install pandas scikit-learn nltk beautifulsoup4 seaborn matplotlib tensorflo
 import nltk
 nltk.download('stopwords')
 
-🧼 Data Preprocessing
+ 🧼 Data Preprocessing
 Each review is cleaned using the following steps:
 - Remove HTML tags
 - Convert to lowercase
@@ -44,9 +44,10 @@ TF-IDF vectorization is applied to convert text into numerical features
 - Saved using joblib
 
 2. Naive Bayes (MultinomialNB)
-- Simple and fast probabilistic classifier
+- Probabilistic classifier optimized via GridSearchCV
+- Best parameters: alpha=1.5, fit_prior=True
 - Trained using TF-IDF features
-- Evaluation includes accuracy and classification report
+- Evaluation includes accuracy (86.04%) and detailed classification report
 
 3. Support Vector Machine (LinearSVC)
 - Effective for high-dimensional spaces
@@ -55,10 +56,15 @@ TF-IDF vectorization is applied to convert text into numerical features
 
 4. Deep Learning (Keras)
 - Architecture:
-Dense(128) → Dropout → Dense(64) → Dropout → Dense(1)
+Dense(128, relu) → Dropout(0.3) → Dense(64, relu) → Dropout(0.3) → Dense(1, sigmoid)
+- Input: TF-IDF vectors converted to dense arrays
 - Loss: binary_crossentropy
 - Optimizer: adam
-- Early stopping on validation loss
+- Early stopping on validation loss (patience=3)
+- Trained for up to 20 epochs with batch_size=64
+- Evaluation includes accuracy and classification report
+- Test Accuracy: Reported via model.evaluate()
+- Predictions: Thresholded at 0.5 to convert probabilities to binary labels
 
 
 ✅ Model Accuracy Scores:
@@ -66,7 +72,7 @@ Dense(128) → Dropout → Dense(64) → Dropout → Dense(1)
 - Precision: 0.89
 - Recall: 0.89
 - F1-Score: 0.89
-- Naive Bayes Accuracy: 85.94%
+- Naive Bayes Accuracy: 86.04%
 - Precision: 0.86
 - Recall: 0.86
 - F1-Score: 0.86
@@ -74,21 +80,33 @@ Dense(128) → Dropout → Dense(64) → Dropout → Dense(1)
 - Precision: 0.88
 - Recall: 0.88
 - F1-Score: 0.88
-- Deep Learning (Keras) Accuracy: 86.94%
-- Precision: 0.87
-- Recall: 0.87
-- F1-Score: 0.87
+- Deep Learning (Keras) Accuracy: 87.88%
+- Precision: 0.88
+- Recall: 0.88
+- F1-Score: 0.88
+
 
 
 
 📈 Evaluation
- models are evaluated using:
-- Accuracy
+- Accuracy Score
+Measures overall correctness of predictions.
 - Classification Report
-- Confusion Matrix (visualized with seaborn)
+Includes precision, recall, and F1-score for each class, giving insight into model balance and bias.
+- Confusion Matrix (Visualized with Seaborn)
+A visualization that shows true vs. predicted labels, helping identify misclassifications and class-specific performance.
 
 🔮 Prediction Script
-Interactive CLI for real-time sentiment prediction
+A standalone script enables instant sentiment prediction from any given text:
+   Loads the saved TF-IDF vectorizer and trained classification model
+   Accepts a predefined example sentence (or can be easily adapted for user input)
+   Transforms the sentence into TF-IDF features for model compatibility
+   Uses the trained model to predict sentiment (Positive / Negative)
+   Outputs the prediction result instantly for quick demonstration and validation
+
+
+
+
 
 
 
