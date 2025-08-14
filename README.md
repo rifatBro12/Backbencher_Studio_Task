@@ -54,7 +54,7 @@ The following Python libraries are required:
 
 Install them using:
 ```bash
-pip install pandas scikit-learn beautifulsoup4 nltk matplotlib seaborn tensorflow joblib
+pip install pandas scikit-learn beautifulsoup4 nltk matplotlib seaborn tensorflow joblib streamlit
 ```
 
 Additionally, download NLTK stopwords:
