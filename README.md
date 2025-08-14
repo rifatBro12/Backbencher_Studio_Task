@@ -1,14 +1,13 @@
-# Movie_review_system
-
 #  Sentiment Analysis on IMDb Reviews
 
-This project performs binary sentiment classification (Positive/Negative) on IMDb movie reviews using both Logistic Regression , Naive Bayes and a Deep Learning model. It includes data preprocessing, TF-IDF vectorization, model training, evaluation, hyperparameter tuning, and deployment-ready prediction functionality.
+This project performs binary sentiment classification (Positive/Negative) on IMDb movie reviews using both Logistic Regression , Naive Bayes,
+SVM and a Deep Learning model. It includes data preprocessing, TF-IDF vectorization, model training, evaluation, hyperparameter tuning, and deployment-ready prediction functionality.
 
 ---
 
 ##  Project Structure
 
-- `train_data(1).csv` — kaggle dataset containing movie reviews and sentiment labels.
+- `train_data.csv` — kaggle dataset containing movie reviews and sentiment labels.
 - `logistic_regression_imdb_optimized.pkl` — Saved optimized Logistic Regression model.
 - `tfidf_vectorizer.pkl` — Saved TF-IDF vectorizer.
 - `predict_sentiment()` — Function to classify new input text.
@@ -50,7 +49,6 @@ TF-IDF vectorization is applied to convert text into numerical features
 - Probabilistic classifier optimized via GridSearchCV
 - Best parameters: alpha=1.5, fit_prior=True
 - Trained using TF-IDF features
-- Evaluation includes accuracy (86.04%) and detailed classification report
 
 3. Support Vector Machine (LinearSVC)
 - Effective for high-dimensional spaces
