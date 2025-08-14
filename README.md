@@ -73,21 +73,13 @@ Dense(128, relu) → Dropout(0.3) → Dense(64, relu) → Dropout(0.3) → Dense
  ## Model Accuracy Scores:
 
 - Logistic Regression Accuracy: 89.16%
-- Precision: 0.89
-- Recall: 0.89
-- F1-Score: 0.89
+
 - Naive Bayes Accuracy: 86.04%
-- Precision: 0.86
-- Recall: 0.86
-- F1-Score: 0.86
+
 - LinearSVC Accuracy: 87.96%
-- Precision: 0.88
-- Recall: 0.88
-- F1-Score: 0.88
-- Deep Learning (Keras) Accuracy: 87.88%
-- Precision: 0.88
-- Recall: 0.88
-- F1-Score: 0.88
+
+- Deep Learning (Keras) Accuracy: 88.30%
+
 
 
 
