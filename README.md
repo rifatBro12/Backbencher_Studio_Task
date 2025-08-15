@@ -108,7 +108,7 @@ Models are evaluated using:
 | Logistic Regression  | 89.16        | 0.91 / 0.87     | 0.87 / 0.92  | 0.89 / 0.89    |
 | Naive Bayes          | 86.04        | 0.87 / 0.85     | 0.85 / 0.87  | 0.86 / 0.86    |
 | Linear SVM           | 87.96        | 0.89 / 0.87     | 0.86 / 0.90  | 0.88 / 0.88    |
-| Deep Learning        | 88.30        | 0.88 / 0.89     | 0.89 / 0.87  | 0.89 / 0.88    |
+| Deep Learning        | 88.64        | 0.89 / 0.88     | 0.88 / 0.89  | 0.89 / 0.89    |
 | Optimized Logistic   | 89.10        | 0.91 / 0.87     | 0.87 / 0.92  | 0.89 / 0.89    |
 
 ## Visualization
